@@ -49,7 +49,12 @@ def validate_folders():
 
 
 def print_menu():
-    os.system("clear")
+    global operating_system
+
+    if operating_system == 'unix':
+        os.system("clear")
+    elif operating_system == 'windows':
+        os.system("cls")
 
     print(30 * "-", "MENU", 30 * "-")
     print("1. Sort Downloads folder")
@@ -172,7 +177,6 @@ def sort(compress=False):
                 others_folder = os.path.join(downloads_folder, 'Other')
                 os.rename(os.path.join(downloads_folder, filename), os.path.join(others_folder, filename))
 
-            time.sleep(0.05)
             bar()
 
 
