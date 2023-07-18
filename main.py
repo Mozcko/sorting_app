@@ -4,6 +4,7 @@ from alive_progress import alive_bar
 from PIL import Image
 
 downloads_folder=""
+operating_system=""
 
 def main():
     global downloads_folder
@@ -16,6 +17,7 @@ def get_download_path():
     #Returns the default downloads path for Linux or windows
     
     if os.name == 'nt':
+        operating_system='windows'
         import winreg
         sub_key = r'SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders'
         downloads_guid = '{374DE290-123F-4565-9164-39C4925E467B}'
@@ -23,6 +25,7 @@ def get_download_path():
             location = winreg.QueryValueEx(key, downloads_guid)[0]
         return location
     else:
+        operating_system='unix'
         return os.path.join(os.path.expanduser('~'), 'Downloads')
 
 def validate_folders():
