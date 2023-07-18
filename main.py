@@ -109,6 +109,7 @@ def sort(compress=False):
             name, extension=os.path.splitext(os.path.join(downloads_folder, filename))
 
             if filename in ['Images', 'Programming', 'Pages', 'Documents', 'Media', 'Executables', 'Archives', 'Spreadsheets', 'Other']:
+                bar()
                 continue
             
             # Moves the images to the Images folder
