@@ -110,6 +110,7 @@ def sort(compress=False):
 
             if filename in ['Images', 'Programming', 'Pages', 'Documents', 'Media', 'Executables', 'Archives', 'Spreadsheets', 'Other']:
                 bar()
+                time.sleep(0.05)
                 continue
             
             # Moves the images to the Images folder
