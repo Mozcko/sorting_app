@@ -7,6 +7,7 @@ downloads_folder = ""
 operating_system = ""
 
 
+# main function
 def main():
     global downloads_folder
     downloads_folder = get_download_path()
@@ -15,6 +16,7 @@ def main():
     menu()
 
 
+# depending on the operating system it gets the downloads path
 def get_download_path():
     # Returns the default downloads path for Linux or windows
     global operating_system
@@ -32,6 +34,7 @@ def get_download_path():
         return os.path.join(os.path.expanduser('~'), 'Downloads')
 
 
+# search the folders inside the downloads folder
 def validate_folders():
     folders = ['Images', 'Programming', 'Pages', 'Documents', 'Media', 'Executables', 'Archives', 'Spreadsheets',
                'Other']
@@ -48,6 +51,7 @@ def validate_folders():
                 bar()
 
 
+# prints the options for the menu
 def print_menu():
     global operating_system
 
@@ -64,6 +68,7 @@ def print_menu():
     print(67 * "-")
 
 
+# gets the options for the menu
 def menu():
     running = True
     while running:
@@ -87,8 +92,8 @@ def menu():
             time.sleep(1)
 
 
+# it sorts all the files inside the folder
 def sort(compress=False):
-    # this is just for the looks
     # it counts how many images and files are in total
     images = 0
     files = 0
