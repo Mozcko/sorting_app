@@ -1,8 +1,18 @@
 import os
+import sys
 import json
 from typing import Dict, List
 
-CONFIG_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config.json")
+def get_base_path():
+    """Returns the base directory, works for both dev script and PyInstaller executable."""
+    if getattr(sys, 'frozen', False):
+        # Running as compiled executable, so config.json should be next to the executable
+        return os.path.dirname(sys.executable)
+    else:
+        # Running as a python script, config.json is in the project root
+        return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+CONFIG_FILE = os.path.join(get_base_path(), "config.json")
 
 def load_config() -> dict:
     """Loads the configuration from config.json."""
