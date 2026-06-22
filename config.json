@@ -1,0 +1,13 @@
+{
+  "categories": {
+    "Images": [".jpg", ".png", ".jpeg", ".webp", ".bmp", ".gif", ".ico", ".raw", ".tif", ".tiff"],
+    "Programming": [".c", ".cpp", ".cs", ".java", ".js", ".json", ".py", ".sql", ".swift", ".vb", ".asp", ".aspx", ".css", ".htm", ".html", ".jsp", ".php", ".xml"],
+    "Pages": [".afdesign", ".ai", ".cad", ".cdr", ".drw", ".dwg", ".eps", ".odg", ".svg", ".vsdx", ".afpub", ".indd", ".pdf", ".pdfxml", ".pmd", ".pub", ".qxp"],
+    "Documents": [".doc", ".docx", ".odt", ".pages", ".rtf", ".txt", ".wpd", ".wps", ".ppt", ".pptx", ".odp"],
+    "Media": [".aif", ".mov", ".mp3", ".mp4", ".mpg", ".wav", ".wma", ".wmv"],
+    "Executables": [".app", ".bat", ".bin", ".cmd", ".com", ".exe", ".vbs", ".x86", ".apk", ".jar", ".appimage", ".run", ".pyc", ".vbe", ".jse"],
+    "Archives": [".7z", ".rar", ".tar", ".tar.gz", ".zip"],
+    "Spreadsheets": [".csv", ".numbers", ".ods", ".xls", ".xlsx"]
+  },
+  "default_folder": "Other"
+}
